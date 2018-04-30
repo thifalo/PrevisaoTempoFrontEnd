@@ -1,0 +1,150 @@
+/* CSS INDEX PARA ESTILIZAR O BACKGROUND INICIAL DA APLICAÇÃO */
+
+div.background-index {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url('\\app\\ProjetoTempo\\PrevisaoTempo\\lib\\img\\template.png');
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+span.text-logo {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: 31px;
+    left: 130px;
+    font: bold;
+}
+
+span.sub-text-logo {
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: 73px;
+    left: 130px;
+}
+
+
+/* CSS PARA ESTILIZAR AS DEMAIS PÁGINAS DA APLICAÇÃO */
+
+div.input-tempo {
+    position: relative;
+    left: 40px;
+    top: 30px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.grid {
+    width: 500px;
+    height: 250px;
+}
+
+div.grid-size {
+    left: 20px;
+    top: 360px;
+}
+
+hr {
+    display: block;
+    margin-top: 4.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.grid-card {
+    border: rgb(243, 243, 243) solid 0.3px;
+    position: relative;
+    top: 60px;
+    left: 40px;
+    width: 94%;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+div.input-float {
+    position: absolute;
+    top: 235px;
+    left: 36px;
+}
+
+div#btnLimpar {
+    top: 21px;
+}
+
+.layout-padding ng-scope {
+    background-color: white;
+}
+
+div.btnLimpar#btnLimpar {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+md-content.inputs {
+    background-color: white;
+}
+
+@media screen and (max-width: 680px) {
+    div.btnLimpar#btnLimpar {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+}
+
+
+/* ESTILOS RESPONSIVOS */
+
+@media screen and (max-width: 418px) {
+    span.sub-text-logo {
+        font-size: 16px;
+        color: white;
+        position: absolute;
+        top: 93px;
+        left: 38px;
+    }
+    span.text-logo {
+        font-size: 21px;
+        font-weight: 300;
+        color: white;
+        position: absolute;
+        top: 47px;
+        left: 130px;
+    }
+    div.btnLimpar#btnLimpar {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    @media (min-width: 320px) and (max-width: 418px) {
+        span.sub-text-logo {
+            font-size: 16px;
+            color: white;
+            position: absolute;
+            top: 93px;
+            left: 51px;
+        }
+        span.text-logo {
+            font-size: 21px;
+            font-weight: 300;
+            color: white;
+            position: absolute;
+            top: 29px;
+            left: 130px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        span.sub-text-logo {
+            display: none;
+        }
+        span.text-logo {
+            display: none;
+        }
+    }
+}

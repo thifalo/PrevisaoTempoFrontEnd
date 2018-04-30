@@ -1,0 +1,67 @@
+<!-- INPUT FIXO TELA PRINCIPAL DE CONSULTA -->
+<md-content layout-padding class="inputs">
+    <form name="formCidade" ng-submit="vm.pesquisarCodigo(vm.cidade)">
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <md-autocomplete flex required md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="50" md-selected-item="vm.selectedItem"
+                    md-search-text="vm.searchText" md-items="item in vm.pesquisarCodigo(vm.searchText)" md-item-text="item.Nome"
+                    md-floating-label="Cidade">
+                    <md-item-template>
+                        <span md-highlight-text="vm.searchText">{{item.Nome}}</span>
+                    </md-item-template>
+                </md-autocomplete>
+            </div>
+            <div class="btnLimpar" id="btnLimpar">
+                <button type="button" ng-click="vm.limpar()" ng-disabled="vm.selectedItem === null" class="btn btn-primary btn-sm">Limpar</button>
+            </div>
+            <div class="form-group col-md-5">
+                <md-input-container class="md-block">
+                    <label>Url Formatada</label>
+                    <input ng-model="vm.urlFormatada" disabled>
+                </md-input-container>
+            </div>
+        </div>
+    </form>
+</md-content>
+<!-- INÍCIO DOS INPUTS DE LEITURA DE GRID -->
+<md-content layout-padding class="inputs" ng-if="vm.validaGrid">
+    <md-card class="inputs">
+        <md-content layout-padding class="inputs">
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt>
+                    <label>Nome da Cidade</label>
+                    <input readonly name="nomeCidade" ng-model="vm.nomeCidade" />
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt>
+                    <label>UF</label>
+                    <input readonly name="uf" ng-model="vm.uf" />
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sx>
+                    <label>Data da Consulta (Atualização)</label>
+                    <input readonly name="dataConsulta" value="{{vm.dataConsulta | date: 'dd/MM/yyyy'}}" />
+                </md-input-container>
+            </div>
+        </md-content>
+        <!-- INICÍO DA GRID -->
+        <md-content layout-padding ng-if="vm.validaGrid" class="inputs">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Tempo</th>
+                        <th scope="col">Máxima</th>
+                        <th scope="col">Mínima</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in vm.listaPrevisao">
+                        <td>{{item.Dia | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{item.TempoDescricao}}</td>
+                        <td>{{item.Maxima}}°C</td>
+                        <td>{{item.Minima}}°C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-content>
+    </md-card>
+</md-content>

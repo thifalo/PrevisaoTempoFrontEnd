@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+	<title>Previsão do Tempo</title>
+	<base href="/">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-language" content="pt-br, en-US" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Style Declarations-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link rel="stylesheet" href="../app/ProjetoTempo/PrevisaoTempo/lib/style/style.css">
+	<!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	<!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+	<link href="/app/projetoTempo/previsaoTempo/lib/img/favicon.ico" rel="shortcut icon">
+
+	<!-- inject:css -->
+	<!-- endinject -->
+</head>
+
+<body>
+	<section>
+		<div class="background-index">
+			<span class="text-logo">PREVISÃO DO TEMPO</span>
+			<span class="sub-text-logo">Seu portal de consultas sempre atualizado!</span>
+		</div>
+		<div ng-view=""></div>
+	</section>
+
+	<!-- Angular JS Reference -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-messages.min.js"></script>
+
+	<!-- inject:js -->
+	<!-- endinject -->
+
+	<!-- Modules -->
+	<script src="../app/app.module.js"></script>
+	<script src="../app/core/core.module.js"></script>
+	<script src="../app/ProjetoTempo/projetoTempo.module.js"></script>
+	<script src="../app/ProjetoTempo/PrevisaoTempo/tempo.module.js"></script>
+	
+	<!-- Controllers and Services -->
+	<script src="../app/ProjetoTempo/PrevisaoTempo/tempo.controller.js"></script>
+	<script src="../app/ProjetoTempo/PrevisaoTempo/tempo.service.js"></script>
+
+	<!-- Additional libs -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</body>
+
+</html>
